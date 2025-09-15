@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
     
     // Vérifier que le produit existe
     const product = await prisma.product.findUnique({
-      where: { id: validatedData.productId }
+      where: { id: parseInt(validatedData.productId, 10) }
     });
     
     if (!product) {
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
         phone: validatedData.phone || null,
         company: validatedData.company || null,
         website: validatedData.website || null,
-        productId: validatedData.productId,
+        productId: parseInt(validatedData.productId, 10),
         quantity: validatedData.quantity,
         price: validatedData.price || null,
         quality: validatedData.quality || null,
