@@ -59,7 +59,7 @@ export default async function HomePage() {
             
             {/* Main heading */}
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              L'Excellence
+              L&apos;Excellence
               <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                 Pharmaceutique
               </span>
@@ -126,7 +126,7 @@ export default async function HomePage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Découvrez les types de concombres de mer que nous achetons, 
-              depuis l'holothurie sèche jusqu'aux bêches-de-mer premium.
+              depuis l&apos;holothurie sèche jusqu&apos;aux bêches-de-mer premium.
             </p>
           </div>
           
@@ -292,7 +292,7 @@ export default async function HomePage() {
                       href={`/site/blog/${post.slug}`}
                       className="inline-flex items-center gap-2 text-[#43b495] font-medium hover:gap-3 transition-all"
                     >
-                      Lire l'article
+                      Lire l&apos;article
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -326,7 +326,7 @@ export default async function HomePage() {
           </h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
             Rejoignez notre réseau de laboratoires pharmaceutiques et découvrez 
-            l'excellence de nos produits marins
+            l&apos;excellence de nos produits marins
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

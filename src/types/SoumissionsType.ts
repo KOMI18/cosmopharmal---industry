@@ -10,9 +10,9 @@ export type Submission = {
     price?: string;
     quality?: string;
     origin: string;
+    images?:string;
     message: string;
     certifications?: string;
-    acceptTerms: boolean;
     createdAt: Date;
     updatedAt: Date;
   };

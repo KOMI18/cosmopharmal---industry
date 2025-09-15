@@ -61,28 +61,35 @@ export async function generateStaticParams() {
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const product = await prisma.product.findUnique({
-    where: { slug:  params.slug },
-    include: {
-      categories: { 
-        include: { 
-          category: true 
-        } 
-      },
-      submissions: { 
-        where: { status: 'ACCEPTED' }, 
-        take: 5,
-        orderBy: { createdAt: 'desc' }
+const product = await prisma.product.findUnique({
+  where: { slug: params.slug },
+  include: {
+    categories: { include: { category: true } },
+    submissions: { 
+      where: { status: 'ACCEPTED' }, 
+      take: 5,
+      orderBy: { createdAt: 'desc' },
+      select: {
+        id: true,
+        message: true,
+        supplier: true,
+        email: true,
+        phone: true,
+        status: true,
+        createdAt: true,
+        updatedAt: true,
+        productId: true
       }
     }
-  });
+  }
+});
 
   if (!product) {
     notFound();
   }
 
   // Données structurées pour le SEO
-  const productStructuredData = generateProductStructuredData(product);
+  // const productStructuredData = generateProductStructuredData(product);
   const breadcrumbStructuredData = generateBreadcrumbStructuredData([
     { name: 'Accueil', url: '/' },
     { name: 'Produits', url: '/produits' },
@@ -92,10 +99,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <>
       {/* Données structurées */}
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productStructuredData) }}
-      />
+      /> */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}

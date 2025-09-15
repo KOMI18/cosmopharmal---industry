@@ -98,66 +98,78 @@ export const columns: ColumnDef<Submission>[] = [
   {
     id: "actions",
     enableHiding: false,
-    cell: ({ row }) => {
-      const dossier = row.original
-      const [open, setOpen] = useState(false)
-      const [loader, setLoader] = useState(false)
-      const handleDelete = async (dossierReference : string) => {
-        setLoader(true);
-        await new Promise((resolve) => setTimeout(resolve, 5000));
-        console.log("delete " , dossierReference);
-        setLoader(false);
-        setOpen(false)
-      }
-      const router = useRouter();
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only"></span>
-              <MoreHorizontal />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" >
-            <DropdownMenuLabel className="cursor-pointer" onClick={() => router.push(`/my-space/${dossier.id}`)}>Voir les details</DropdownMenuLabel>
-            <DropdownMenuItem className="cursor-pointer"
-              onClick={() => navigator.clipboard.writeText(dossier.id)}
-            >
-              Copier le reference
-            </DropdownMenuItem>
-            <DropdownMenuSeparator /> 
-            {/* <DropdownMenuItem className="text-[#e11d48]"> */}
-              <AlertDialog open={open}>
-                <AlertDialogTrigger className="text-[#e11d48] cursor-pointer mx-2 text-sm" onClick={() => setOpen(true)}>
-                  Supprimer
-                </AlertDialogTrigger> 
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle  className="flex flex-col items-center  justify-center">
-                      <Trash className="mr-2 h-20 w-20 text-[#e11d48] " />
-                      {""}
-                      Êtes-vous absolument sûr ?
-                      </AlertDialogTitle>
-                    <AlertDialogDescription>
-                    Cette action est irréversible. 
-                    Elle supprimera définitivement votre dossier  de nos serveurs.
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel onClick={() => setOpen(false)}>Cancel</AlertDialogCancel>
-                    <AlertDialogAction className="bg-[#e11d48] cursor-pointer" onClick={() => handleDelete(dossier.id)}>
-                      {
-                        loader ?
-                        <Loader/>
-                        : "Supprime"
-                      }
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      )
-    },
+    cell: ({ row }) => <ActionsCell dossier={row.original} />,
   },
+  
 ]
+// Composant React pour gérer les actions d'une ligne
+function ActionsCell({ dossier }: { dossier: Submission }) {
+  const [open, setOpen] = useState(false)
+  const [loader, setLoader] = useState(false)
+  const router = useRouter()
+
+  const handleDelete = async (dossierReference: string) => {
+    setLoader(true)
+    await new Promise((resolve) => setTimeout(resolve, 5000))
+    console.log("delete", dossierReference)
+    setLoader(false)
+    setOpen(false)
+  }
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" className="h-8 w-8 p-0">
+          <span className="sr-only"></span>
+          <MoreHorizontal />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuLabel
+          className="cursor-pointer"
+          onClick={() => router.push(`/my-space/${dossier.id}`)}
+        >
+          Voir les détails
+        </DropdownMenuLabel>
+        <DropdownMenuItem
+          className="cursor-pointer"
+          onClick={() => navigator.clipboard.writeText(dossier.id)}
+        >
+          Copier le référence
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <AlertDialog open={open}>
+          <AlertDialogTrigger
+            className="text-[#e11d48] cursor-pointer mx-2 text-sm"
+            onClick={() => setOpen(true)}
+          >
+            Supprimer
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle className="flex flex-col items-center justify-center">
+                <Trash className="mr-2 h-20 w-20 text-[#e11d48]" />
+                Êtes-vous absolument sûr ?
+              </AlertDialogTitle>
+              <AlertDialogDescription>
+                Cette action est irréversible. Elle supprimera définitivement
+                votre dossier de nos serveurs.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel onClick={() => setOpen(false)}>
+                Cancel
+              </AlertDialogCancel>
+              <AlertDialogAction
+                className="bg-[#e11d48] cursor-pointer"
+                onClick={() => handleDelete(dossier.id)}
+              >
+                {loader ? <Loader /> : "Supprime"}
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+}

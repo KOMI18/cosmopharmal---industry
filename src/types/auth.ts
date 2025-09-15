@@ -28,5 +28,5 @@ export interface AuthState {
 }
 export interface AuthResponse {
     admin: Admin
-    message : String
+    message : string
   }

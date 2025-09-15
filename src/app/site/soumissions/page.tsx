@@ -14,13 +14,13 @@ export const metadata = generateSEO({
 async function getProducts() {
   return await prisma.product.findMany({
     where: { isActive: true },
-    select: {
-      id: true,
-      name: true,
-      slug: true,
-      shortDesc: true,
-      priceRange: true
-    },
+    // select: {
+    //   id: true,
+    //   name: true,
+    //   slug: true,
+    //   shortDesc: true,
+    //   priceRange: true
+    // },
     orderBy: { name: 'asc' }
   });
 }
@@ -41,7 +41,7 @@ export default async function SubmissionPage() {
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Rejoignez Notre
-              <span className="block text-white/90">Réseau d'Excellence</span>
+              <span className="block text-white/90">Réseau d&apos;Excellence</span>
             </h1>
             
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -144,7 +144,7 @@ export default async function SubmissionPage() {
               {/* Contact */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Besoin d'Aide ?
+                  Besoin d&apos;Aide ?
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Notre équipe est disponible pour vous accompagner dans votre démarche.

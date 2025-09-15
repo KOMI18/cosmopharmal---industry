@@ -1,6 +1,6 @@
 // lib/seo.ts
 import { Metadata } from 'next';
-
+import { Product } from '@/types';
 // Configuration SEO globale
 export const siteConfig = {
   name: "Cosmopharmal industries - Fournisseurs de Concombres de Mer",
@@ -95,7 +95,7 @@ export function generateSEO({
 }
 
 // Fonction pour générer les données structurées (Schema.org)
-export function generateProductStructuredData(product: any) {
+export function generateProductStructuredData(product:Product ) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',

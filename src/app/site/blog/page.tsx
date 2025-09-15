@@ -65,7 +65,7 @@ export default async function BlogPage() {
             </h1>
             
             <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              Restez à la pointe de l'industrie des concombres de mer pharmaceutiques avec nos analyses, 
+              Restez à la pointe de l&apos;industrie des concombres de mer pharmaceutiques avec nos analyses, 
               guides et actualités réglementaires.
             </p>
             
@@ -133,7 +133,7 @@ export default async function BlogPage() {
                   </div>
                   
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 hover:text-[#43b495] transition-colors">
-                    <Link href={`/blog/${featuredPost.slug}`}>
+                    <Link href={`/site/blog/${featuredPost.slug}`}>
                       {featuredPost.title}
                     </Link>
                   </h2>
@@ -148,10 +148,10 @@ export default async function BlogPage() {
                     </div>
                     
                     <Link
-                      href={`/blog/${featuredPost.slug}`}
+                      href={`/site/blog/${featuredPost.slug}`}
                       className="group inline-flex items-center gap-2 bg-[#43b495] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#358971] transition-all duration-300 hover:gap-3"
                     >
-                      Lire l'article
+                      Lire l&apos;article
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -171,7 +171,7 @@ export default async function BlogPage() {
                 Tous nos <span className="text-[#43b495]">Articles</span>
               </h2>
               <p className="text-gray-600 text-lg">
-                Explorez notre bibliothèque d'expertise en concombres de mer pharmaceutiques
+                Explorez notre bibliothèque d&apos;expertise en concombres de mer pharmaceutiques
               </p>
             </div>
             
@@ -223,7 +223,7 @@ export default async function BlogPage() {
                     
                     {/* Title */}
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#43b495] transition-colors line-clamp-2">
-                      <Link href={`/blog/${post.slug}`}>
+                      <Link href={`/site/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </h3>
@@ -240,10 +240,10 @@ export default async function BlogPage() {
                       </div>
                       
                       <Link
-                        href={`/blog/${post.slug}`}
+                        href={`/site/blog/${post.slug}`}
                         className="group/link inline-flex items-center gap-2 text-[#43b495] hover:text-[#358971] transition-all duration-300"
                       >
-                        Lire l'article
+                        Lire l&apos;article
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>

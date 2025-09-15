@@ -249,8 +249,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         {post.author || 'Expert ConcombresPharm'}
                       </h3>
                       <p className="text-gray-600">
-                        Expert en produits marins pharmaceutiques avec plus de 10 ans d'expérience 
-                        dans l'industrie des concombres de mer et holothuries.
+                        Expert en produits marins pharmaceutiques avec plus de 10 ans d&apos;expérience 
+                        dans l&apos;industrie des concombres de mer et holothuries.
                       </p>
                     </div>
                   </div>
@@ -284,7 +284,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                   {/* CTA */}
                   <div className="bg-gradient-to-br from-[#43b495] to-[#358971] rounded-2xl p-6 text-white">
-                    <h3 className="font-bold text-xl mb-3">Besoin d'expertise ?</h3>
+                    <h3 className="font-bold text-xl mb-3">Besoin d&apos;expertise ?</h3>
                     <p className="text-white/90 mb-4 text-sm">
                       Nos experts sont là pour vous accompagner dans vos projets pharmaceutiques marins.
                     </p>
@@ -350,7 +350,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         href={`/blog/${relatedPost.slug}`}
                         className="inline-flex items-center gap-2 text-[#43b495] font-medium hover:gap-3 transition-all"
                       >
-                        Lire l'article
+                        Lire l&apos;article
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>

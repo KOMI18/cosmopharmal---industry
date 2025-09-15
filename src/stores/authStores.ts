@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { AuthState , LoginCredentials ,  Admin } from '@/types/auth';
 import { ApiResponse } from '@/types/api';
-import { log } from 'console';
+
 
 // Store avec persistance
 const login = async (
@@ -116,13 +116,21 @@ export const useAuthStore = create<AuthState>()(
       version: 1,
       
       // Fonction de migration si nécessaire
-      migrate: (persistedState: any, version: number) => {
+      migrate: (persistedState: unknown, version: number) => {
+        const state = persistedState as Partial<AuthState>;
+
         if (version < 1) {
-          // Migration logic here
+          // Migration logic
+          return {
+            ...state,
+            admin: state.admin ?? undefined,
+            isAuthenticated: state.isAuthenticated ?? false
+           
+          } as AuthState;
         }
-        return persistedState as AuthState;
-      },
-    }
+      
+      }
+   }
   )
 );
 

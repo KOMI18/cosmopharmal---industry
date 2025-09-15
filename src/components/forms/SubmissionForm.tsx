@@ -179,7 +179,7 @@ export default function SubmissionForm({ products }: SubmissionFormProps) {
 
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-              Nom de l'Entreprise
+              Nom de l&apos;Entreprise
             </label>
             <input
               type="text"
@@ -408,14 +408,14 @@ export default function SubmissionForm({ products }: SubmissionFormProps) {
           className="mt-1 w-4 h-4 text-[#43b495] border-gray-300 rounded focus:ring-[#43b495]/50"
         />
         <label htmlFor="acceptTerms" className="text-sm text-gray-600">
-          J'accepte les{' '}
+          J&apos;accepte les{' '}
           <a href="/conditions" className="text-[#43b495] hover:underline">
-            conditions d'utilisation
+            conditions d&apos;utilisation
           </a>{' '}
           et la{' '}
           <a href="/confidentialite" className="text-[#43b495] hover:underline">
             politique de confidentialité
-          </a>. Je consens au traitement de mes données personnelles pour l'évaluation de ma candidature.
+          </a>. Je consens au traitement de mes données personnelles pour l&apos;évaluation de ma candidature.
         </label>
       </div>
       {errors.acceptTerms && (
@@ -462,7 +462,7 @@ export default function SubmissionForm({ products }: SubmissionFormProps) {
         <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
           <p className="text-red-700 flex items-center gap-2">
             <AlertCircle className="w-5 h-5" />
-            Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement.
+            Une erreur est survenue lors de l&apos;envoi. Veuillez réessayer ou nous contacter directement.
           </p>
         </div>
       )}
