@@ -1,0 +1,158 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+model Product {
+  id            Int      @id @default(autoincrement())
+  name          String
+  slug          String   @unique
+  description   String
+  shortDesc     String?   // Description courte pour les cartes
+  specs         String?   // Spécifications demandées (JSON ou texte)
+  
+  // SEO Fields
+  metaTitle     String?
+  metaDesc      String?
+  keywords      String?   // Mots-clés séparés par virgules
+  
+  // Images
+  image         String?   // URL image principale
+  gallery       String?   // JSON array d'images supplémentaires
+  
+  // Business
+  minQuantity   Int?
+  maxQuantity   Int?
+  priceRange    String?   // "500-1000 EUR/kg"
+  quality       String?   // "Grade A", "Premium", etc.
+  origin        String?   // Origine géographique
+  
+  // Status
+  isActive      Boolean  @default(true)
+  featured      Boolean  @default(false)  // Produits vedettes
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  // Relations
+  submissions   Submission[]
+  categories    ProductCategory[]
+  
+  @@map("products")
+}
+
+model Admin {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  password      String
+  name          String?
+  role          String   @default("ADMIN")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("admins")
+}
+
+model Category {
+  id            Int      @id @default(autoincrement())
+  name          String
+  slug          String   @unique
+  description   String?
+  
+  // SEO
+  metaTitle     String?
+  metaDesc      String?
+  
+  createdAt     DateTime @default(now())
+  products      ProductCategory[]
+  
+  @@map("categories")
+}
+
+model ProductCategory {
+  productId     Int
+  categoryId    Int
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  category      Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  
+  @@id([productId, categoryId])
+  @@map("product_categories")
+}
+
+model Submission {
+  id            Int      @id @default(autoincrement())
+  
+  // Fournisseur
+  supplier      String
+  email         String
+  phone         String?
+  company       String?
+  website       String?
+  
+  // Produit proposé
+  productId     Int
+  quantity      String?   // "100kg", "1 tonne"
+  price         String?   // Prix proposé
+  quality       String?   // Grade/qualité
+  origin        String?   // Origine du produit
+  
+  // Détails
+  message       String?
+  images        String?   // JSON array des URLs d'images
+  
+  // Certifications
+  certifications String?  // Bio, ISO, etc.
+  
+  // Status
+  status        SubmissionStatus @default(PENDING)
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  // Relations
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  
+  @@map("submissions")
+}
+
+enum SubmissionStatus {
+  PENDING
+  REVIEWED
+  ACCEPTED
+  REJECTED
+}
+
+model BlogPost {
+  id            Int      @id @default(autoincrement())
+  title         String
+  slug          String   @unique
+  content       String   // Contenu markdown
+  excerpt       String?  // Résumé court
+  
+  // SEO
+  metaTitle     String?
+  metaDesc      String?
+  keywords      String?
+  
+  // Images
+  featuredImage String?
+  
+  // Publication
+  published     Boolean  @default(false)
+  publishedAt   DateTime?
+  
+  // Author (optionnel pour l'avenir)
+  author        String?  @default("Admin")
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@map("blog_posts")
+}
