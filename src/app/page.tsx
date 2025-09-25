@@ -69,7 +69,7 @@ export default async function HomePage() {
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Nous achetons vos stocks de concombres de mer pharmaceutiques. Vendez vos 
-              bêches-de-mer à des prix compétitifs et sécurisés. <Link href="/contact" className="text-white underline hover:no-underline">Contactez-nous</Link> maintenant.
+              bêches-de-mer à des prix compétitifs et sécurisés. <Link href="https://wa.me/+15043846092?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration." className="text-white underline hover:no-underline">Contactez-nous</Link> maintenant.
             </p>
             
             {/* Stats */}

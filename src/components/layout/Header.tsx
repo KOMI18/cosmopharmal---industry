@@ -21,7 +21,7 @@ const navigation = [
   },
   { name: 'Blog', href: '/site/blog' },
   { name: 'Devenir Fournisseur', href: '/site/soumissions' },
-  { name: 'Contact', href: '/site/contact' },
+  // { name: 'Contact', href: '/site/soumissions' },
 ];
 
 export default function Header() {
@@ -47,13 +47,13 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between text-sm">
             <div className="hidden md:flex items-center gap-6">
-              <a href="mailto:contact@concombrespharm.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+              <a href="mailto:cosmopharmaindustry@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
                 <Mail className="w-3 h-3" />
-                contact@cosmopharmal.com
+                cosmopharmaindustry@gmail.com
               </a>
-              <a href="tel:+33123456789" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+              <a href="tel+15043846092" className="flex items-center gap-2 hover:text-white/80 transition-colors">
                 <Phone className="w-3 h-3" />
-                +33 1 23 45 67 89
+                +1 (504) 384 6092
               </a>
             </div>
             <div className="flex items-center gap-4">
@@ -79,8 +79,8 @@ export default function Header() {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#43b495] to-[#358971] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Globe className="w-6 h-6 text-white" />
+                <div className="w-20 h-20 bg-[#43b495] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <img src="/images/logo.jpeg" alt="Logo Cosmopharmal Industry" className="w-full h-full rounded-full object-cover" />
                 </div>
                 <div>
                   <div className="text-xl font-bold text-gray-900">
@@ -146,7 +146,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-4">
               <Link
             
-                href="https://wa.me/+237695511268?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration."
+                href="/site/soumissions"
                 className="bg-[#43b495] text-white px-6 py-2 rounded-xl font-medium hover:bg-[#358971] transition-all duration-300 hover:scale-105"
               >
               Nous Contacter

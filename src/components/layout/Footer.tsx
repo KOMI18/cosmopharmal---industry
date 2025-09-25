@@ -11,9 +11,9 @@ export default function Footer() {
           {/* Company info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#43b495] to-[#358971] rounded-xl flex items-center justify-center">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
+            <div className="w-full h-full bg-[#43b495] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <img src="/images/logo.jpeg" alt="Logo Cosmopharmal Industry" className="w-full h-full rounded-full object-cover" />
+                </div>
               <div>
                 <div className="text-xl font-bold">
                   Cosmopharmal<span className="text-[#43b495]">Industry</span>
@@ -103,16 +103,16 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold">Support</div>
-                  <div className="text-gray-300">+33 6 12 34 56 78</div>`
+                  <div className="text-gray-300">+1 (504) 384 6092</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-gray-800 hover:bg-[#43b495] rounded-lg flex items-center justify-center transition-colors">
-                  <Mail className="w-6 h-6 text-white" />
+                  <Mail className="w-7 h-7 text-white m-1" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold">Email</div>
-                  <div className="text-gray-300">contact@cosmopharmal-industry.com</div>
+                  <div className="text-gray-300">cosmopharmaindustry@gmail.com</div>
                 </div>
               </div>
             </div>

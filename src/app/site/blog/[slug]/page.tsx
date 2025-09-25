@@ -134,7 +134,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Link href="/" className="hover:text-[#43b495] transition-colors">Accueil</Link>
                 <span>/</span>
-                <Link href="/blog" className="hover:text-[#43b495] transition-colors">Blog</Link>
+                <Link href="/site/blog" className="hover:text-[#43b495] transition-colors">Blog</Link>
                 <span>/</span>
                 <span className="text-gray-900 font-medium">Article</span>
               </div>
@@ -289,7 +289,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       Nos experts sont là pour vous accompagner dans vos projets pharmaceutiques marins.
                     </p>
                     <Link 
-                      href="/contact" 
+                      href="/site/soumissiona" 
                       className="inline-flex items-center gap-2 bg-white text-[#43b495] px-4 py-2 rounded-xl font-medium text-sm hover:bg-gray-50 transition-colors"
                     >
                       Nous contacter
@@ -337,7 +337,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </div>
                       
                       <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-[#43b495] transition-colors line-clamp-2">
-                        <Link href={`/blog/${relatedPost.slug}`}>
+                        <Link href={`/site/blog/${relatedPost.slug}`}>
                           {relatedPost.title}
                         </Link>
                       </h3>
@@ -347,7 +347,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </p>
                       
                       <Link
-                        href={`/blog/${relatedPost.slug}`}
+                        href={`/site/blog/${relatedPost.slug}`}
                         className="inline-flex items-center gap-2 text-[#43b495] font-medium hover:gap-3 transition-all"
                       >
                         Lire l&apos;article

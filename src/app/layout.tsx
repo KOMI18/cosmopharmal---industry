@@ -2,8 +2,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-
 import { generateSEO, generateOrganizationStructuredData } from '@/lib/seo';
+import WhatsAppButton from '@/components/ui/WhatsAppButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,6 +31,7 @@ export default function RootLayout({
           <main className="flex-1">
             {children}
           </main>
+          <WhatsAppButton />
         </div>
       </body>
     </html>

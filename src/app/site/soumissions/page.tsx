@@ -8,7 +8,7 @@ export const metadata = generateSEO({
   title: 'Devenir Fournisseur - Soumettre une Offre de Concombres de Mer',
   description: 'Rejoignez notre réseau de fournisseurs certifiés. Soumettez votre offre de concombres de mer pharmaceutiques et connectez-vous avec des laboratoires mondiaux.',
   keywords: ['devenir fournisseur concombre mer', 'soumettre offre holothurie', 'fournisseur pharmaceutique marin', 'réseau fournisseurs certifiés'],
-  url: '/soumission'
+  url: '/site/soumission'
 });
 
 async function getProducts() {
@@ -153,20 +153,20 @@ export default async function SubmissionPage() {
                   <div>
                     <span className="font-medium text-gray-900">Email :</span>
                     <a href="mailto:fournisseurs@concombrespharm.com" className="text-[#43b495] hover:underline ml-2">
-                      fournisseurs@concombrespharm.com
+                      cosmopharmaindustry@gmail.co
                     </a>
                   </div>
                   <div>
                     <span className="font-medium text-gray-900">Téléphone :</span>
                     <a href="tel:+33123456789" className="text-[#43b495] hover:underline ml-2">
-                      +33 1 23 45 67 89
+                    +1 (504) 384 609
                     </a>
                   </div>
                 </div>
                 
                   
                 <a
-                href={`https://wa.me/+237695511268?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration.`}
+                href={`https://wa.me/+15043846092?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full mt-4 bg-[#43b495] text-white px-4 py-3 rounded-xl font-medium hover:bg-[#358971] transition-colors flex items-center justify-center gap-2"

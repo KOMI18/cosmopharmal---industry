@@ -157,3 +157,53 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* À ajouter dans votre globals.css */
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  50% { transform: translateX(-5px); }
+  60% { transform: translateX(5px); }
+  70% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  90% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-shake {
+  animation: shake 1s ease-in-out;
+}
+
+/* Animation alternative plus douce */
+@keyframes gentle-shake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-3px) rotate(-2deg); }
+  75% { transform: translateX(3px) rotate(2deg); }
+}
+
+.animate-gentle-shake {
+  animation: gentle-shake 0.8s ease-in-out;
+}
+
+/* Animation de pulsation alternative */
+@keyframes pulse-attention {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  50% { 
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.3);
+  }
+  100% { 
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animate-pulse-attention {
+  animation: pulse-attention 1.5s ease-in-out;
+}
