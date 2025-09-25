@@ -21,7 +21,7 @@ export default async function Page() {
     <div className="min-h-screen bg-white p-10">
       <h1 className="text-4xl font-bold text-[#43b495] mb-4">Les produit que nous recherchons</h1>
       <p className="text-left text-xl text-black py-4 mb-8">
-        Même si votre produit n'est pas dans cette liste, n'hésitez pas à nous contacter pour nous proposer une offre de concombre de mer. Nous sommes à votre disposition pour discuter de vos besoins.
+       { "Même si votre produit n'est pas dans cette liste, n'hésitez pas à nous contacter pour nous proposer une offre de concombre de mer. Nous sommes à votre disposition pour discuter de vos besoins."}
         <br />
         <br />
         <Link href="https://wa.me/+15043846092?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+" className='py-2'>
