@@ -7,7 +7,13 @@ import WhatsAppButton from '@/components/ui/WhatsAppButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = generateSEO();
+export const metadata: Metadata = {
+  ...generateSEO(),
+  icons: {
+    icon: '/favicon.jpeg', // ✅ ton icône ici
+  },
+  themeColor: '#43b495',
+};
 
 export default function RootLayout({
   children,
@@ -18,19 +24,13 @@ export default function RootLayout({
 
   return (
     <html lang="fr" className="scroll-smooth">
-      <head>
+      <body className={`${inter.className} antialiased bg-white`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
         />
-        <meta name="theme-color" content="#43b495" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className={`${inter.className} antialiased bg-white`}>
         <div className="flex flex-col min-h-screen">
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
           <WhatsAppButton />
         </div>
       </body>

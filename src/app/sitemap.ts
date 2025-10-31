@@ -4,7 +4,7 @@ import prisma from '@/lib/prisma';
 
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://concombrespharm.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.cosmopharmalindustry.org';
 
   // Pages statiques
   const staticPages = [

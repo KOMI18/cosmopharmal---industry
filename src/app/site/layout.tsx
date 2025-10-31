@@ -25,7 +25,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
         />
         <meta name="theme-color" content="#43b495" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.jpeg" />
       </head>
       <body className={`${inter.className} antialiased bg-white`}>
         <div className="flex flex-col min-h-screen">
