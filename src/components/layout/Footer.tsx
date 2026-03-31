@@ -103,7 +103,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold">Support</div>
-                  <div className="text-gray-300">+1 (504) 384 6092</div>
+                  <div className="text-gray-300">+32 466 32 12 47</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
