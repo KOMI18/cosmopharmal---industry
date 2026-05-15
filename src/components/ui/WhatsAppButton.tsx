@@ -82,7 +82,7 @@ const WhatsAppButton = () => {
 
   const handleClick = () => {
     // Ajoutez ici votre logique pour ouvrir WhatsApp
-    window.open('https://wa.me/+32466321247?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration.', '_blank');
+    window.open('https://wa.me/+33748223758?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration.', '_blank');
 
     console.log('Bouton WhatsApp cliqué');
   };
