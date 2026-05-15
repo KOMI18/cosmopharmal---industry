@@ -54,8 +54,8 @@ export default function Footer() {
                 { name: 'Tous les produits', href: '/site/produits' },
                 { name: 'Blog & Actualités', href: '/site/blog' },
                 { name: 'Devenir fournisseur', href: '/site/soumissions' },
-                { name: 'À propos', href: '/site/about' },
-                { name: 'Contact', href: '/contact' }
+                // { name: 'À propos', href: '/site/about' },
+                // { name: 'Contact', href: '/contact' }
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -103,7 +103,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold">Support</div>
-                  <div className="text-gray-300">+32 466 32 12 47</div>
+                  <div className="text-gray-300">+33 7 48 22 37 58</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
