@@ -24,7 +24,7 @@ export default async function Page() {
        { "Même si votre produit n'est pas dans cette liste, n'hésitez pas à nous contacter pour nous proposer une offre de concombre de mer. Nous sommes à votre disposition pour discuter de vos besoins."}
         <br />
         <br />
-        <Link href="https://wa.me/+15043846092?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+" className='py-2'>
+        <Link href="https://wa.me/+33748223758?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+" className='py-2'>
           <span className="bg-[#43b495] text-white px-4 py-2 rounded-md hover:bg-[#43b495]/90 transition-all duration-500">
             Contacter-nous par WhatsApp
           </span>

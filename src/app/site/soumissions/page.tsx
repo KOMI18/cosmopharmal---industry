@@ -159,14 +159,14 @@ export default async function SubmissionPage() {
                   <div>
                     <span className="font-medium text-gray-900">Téléphone :</span>
                     <a href="tel:+33123456789" className="text-[#43b495] hover:underline ml-2">
-                    +1 (504) 384 609
+                     +33 748 223 758
                     </a>
                   </div>
                 </div>
                 
                   
                 <a
-                href={`https://wa.me/+15043846092?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration.`}
+                href={`https://wa.me/+33748223758?text=Bonjour%2C+je+vous+contacte+depuis+votre+site+web+car.+Je+poss%C3%A8de+un+stock+de+concombres+de+mer+%C3%A0+vendre.+%0A%0AJe+suis+int%C3%A9ress%C3%A9+par+une+collaboration.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full mt-4 bg-[#43b495] text-white px-4 py-3 rounded-xl font-medium hover:bg-[#358971] transition-colors flex items-center justify-center gap-2"
