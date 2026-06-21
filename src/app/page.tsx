@@ -74,14 +74,14 @@ export default async function HomePage() {
             
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 py-8">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="text-3xl font-bold text-white">{featuredProducts.length}+</div>
                 <div className="text-white/80">Produits Premium</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white">{totalSuppliers}+</div>
                 <div className="text-white/80">Fournisseurs Certifiés</div>
-              </div>
+              </div> */}
               <div className="text-center">
                 <div className="text-3xl font-bold text-white">50+</div>
                 <div className="text-white/80">Pays Couverts</div>
